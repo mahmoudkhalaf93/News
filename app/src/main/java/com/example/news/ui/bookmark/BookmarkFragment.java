@@ -23,11 +23,8 @@ public class BookmarkFragment extends Fragment {
                 new ViewModelProvider(this).get(BookmarkViewModel.class);
 
         binding = FragmentBookmarkBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
-        bookmarkViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
+        return binding.getRoot();
     }
 
     @Override
